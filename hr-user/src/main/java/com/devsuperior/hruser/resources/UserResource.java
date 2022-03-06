@@ -43,7 +43,7 @@ public class UserResource {
 	}
 	
 	@GetMapping(value = "/search")
-	public ResponseEntity<User> findById(@RequestParam String email){
+	public ResponseEntity<User> findByEmail(@RequestParam String email){
 		
 		logger.info("Localizando Usuário com o email: " + email);
 		
