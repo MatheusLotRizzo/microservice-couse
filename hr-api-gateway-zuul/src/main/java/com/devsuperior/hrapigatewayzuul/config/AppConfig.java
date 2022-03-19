@@ -10,7 +10,7 @@ import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
 @RefreshScope
 @Configuration
 public class AppConfig {
-	
+
 	@Value("${jwt.secret}")
 	private String jwtSecret;
 	
@@ -25,5 +25,4 @@ public class AppConfig {
 	public JwtTokenStore tokenStore() {
 		return new JwtTokenStore(accessTokenConverter());
 	}
-	
 }
